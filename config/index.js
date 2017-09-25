@@ -28,12 +28,18 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-
         '/api': {
             target: 'http://api-m.mtime.cn',
             changeOrigin: true,
             pathRewrite: {
                 '^/api': '/'
+            }
+        },
+        '/cpi': {
+            target: 'http://m.mtime.cn',
+            changeOrigin: true,
+            pathRewrite: {
+                '^/cpi': '/'
             }
         },
         '/mic': {

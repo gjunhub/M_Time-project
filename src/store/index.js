@@ -167,10 +167,7 @@ const store = new Vuex.Store({
         updateNewsDetails(state,data) {
             state.newsDetails = data;
         },
-        /*
-        * 动态路由切换影片详情后，只要上拉加载一次评论，切到其他影片详情后，newTalks的值会将
-        * 上一个影片加载的评论，带到现在的影片详情下边，所以每次切换影片详情都要清空一下。
-        * */
+        
         clearNewtalks(state) {
             state.newTalks = [];
         },
@@ -178,7 +175,8 @@ const store = new Vuex.Store({
         updateMoreNewsDetails(state,data) {
             state.moreNewsDetails = [...state.moreNewsDetails, ...data];
         },
-        //每次进新闻页面，不管之前有没有进过新闻页上拉加载过数据，一律清空上拉加载的更多数据
+        
+        
         clearmoreNewsDetails(state) {
             state.moreNewsDetails = [];
         },
